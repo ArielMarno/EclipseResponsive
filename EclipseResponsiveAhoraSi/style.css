@@ -1,0 +1,480 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'VL NewParis Headline', sans-serif;
+    font-family: 'Brittany Signature', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*----------------INICIO----------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s ease;
+    background: rgba(255, 253, 253, 0.753);
+    z-index: 5;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 9em;
+    height: auto;
+}
+
+
+/*----------------NAVEGADOR DE PAG----------------*/
+
+header label img{
+    width: 1.8rem;
+}
+header input{
+    display: none;
+}
+header label{
+    cursor: pointer;
+    display: none;
+}
+nav a {
+    display: inline-block;
+    padding: 0.3rem;
+    font-family: 'Montserrat';
+    font-size: 0.6rem;
+    font-weight: 800;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: hsl(51, 68%, 61%);
+    cursor: pointer;
+}
+
+/*----------------CAMBIOS X EVENTO SCROLL----------------*/
+
+.abajo {
+    background-color: white;
+    height: 3.5em;
+    transition: 1.5s;
+    opacity: 1;
+}
+
+
+header.abajo .logo,
+header.abajo ul li a {
+    color: black;
+    width: 8.8em;
+    height: auto;
+}
+
+header.abajo a:hover {
+    color: hsl(51, 68%, 61%);
+}
+/*----------------Botones Redes Sociales----------------*/
+
+.social .facebook{
+    margin-right: 1em;
+    margin-left: 0.2em;
+}
+
+header .social a img{
+    width: 1.5rem;
+}
+
+/*-------------------Boton fijo WhatsApp------------------*/
+
+.container-boton{
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 28px;
+    right: 32px;
+    padding: 1px;
+    transition: ease 0.3s;
+    animation: efecto 2s infinite;
+}
+
+.container-boton:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.boton{
+    width: 2em;
+    transition: ease 1s;
+}
+
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    80%{
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
+
+
+/*----------------Sección Nosotros----------------*/
+
+#Nosotros {
+    background-image: url("./Imagenes/BackgroundMarmol.jpg");
+    height: 100vh;
+    display: inline-flex;
+}
+.nosotros aside{
+    width: 50%;
+}
+
+aside h1{
+    margin-top: 16vw;
+    margin-left: 20vw;
+    font-family: 'Brittany Signature';
+    font-size: 2.9rem;
+    color: hsl(51, 68%, 61%);
+    font-weight: 100;
+}
+
+
+.nombre {
+    font-family: 'VL NewParis Headline';
+    font-size: 3rem;
+    font-weight: 500;
+    display: block;
+    color: rgb(34, 31, 31);
+}
+
+.nosotros article {
+    width: 38%;
+}
+.nosotros article p {
+    font-family: 'Montserrat';
+    margin-top:  7.6rem;
+    font-size: 0.6rem;
+    line-height: 1.3rem;
+}
+
+
+.nosotros a {
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+
+/*----------------Sección Servicios----------------*/
+
+#Servicios {
+    font-family: 'Montserrat';
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    height: 100vh;
+}
+
+.iconos {
+    margin-bottom: 1rem;
+    width: 8vw;
+}
+
+.plans ul{
+    padding-top: 6rem;
+    padding-left: 9rem;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.asesoramiento{
+    margin-right: 2rem;
+}
+
+.planes h2 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.planes span {
+    color: black;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.plans div {
+    width: 8vw;
+    height: 3px;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.plans li p {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    line-height: 1.3rem;
+}
+
+/*----------------Sección Portafolio(Colaboraciones)----------------*/
+
+#Portfolio {
+    background-image: url("./Imagenes/BackgroundMarmol.jpg");
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 100vh;
+}
+.colaboraciones h3{
+    font-family: 'VL NewParis Headline';
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 3rem;
+    margin-left: 19.8rem;
+    margin-bottom: 1rem;
+
+}
+.tarjetas{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    margin-top: 2rem;
+    width: 20vw;
+}
+.card a {
+    font-size: 1.2vw;
+    margin-left: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+/*----------------Sección Contacto(Pie de Pag)----------------*/
+
+#Contacto {
+    display: inline-flex;
+    background-image: url("./Imagenes/BackgroundFooter.jpg");
+    height: 100vh;
+    width: 100%;
+}
+.contactanos{
+    margin-top: 5.8rem;
+    margin-left: 7rem;
+    margin-right: 0rem;
+    color: white;
+    width: 35%;
+}
+.contactanos h2{
+    color: hsl(51, 68%, 61%);
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem
+}
+
+.contactanos h3{
+    font-size: 0.9rem;
+    font-weight: 100;
+    width: 18rem;
+    margin-bottom: 1.5rem;
+}
+.contactanos .email a {
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+}
+.contactanos a:hover{
+    color: hsl(51, 68%, 61%);;
+}
+.contactanos .redes{
+    margin-top: 2rem;
+}
+
+.contactanos .redes a{
+    padding-right: 0.3rem;
+}
+
+.contactanos .redes a img{
+    width: 1.5rem;
+}
+
+/*----------------Formulario de Contacto(Pie de Pag)----------------*/
+
+form {
+    font-family: 'Montserrat';
+    margin-top: 8rem;
+    color: white;
+    font-size: 0.5em;
+    font-weight: 400;
+}
+.fila div{
+    display: inline-block;
+    padding: 0.7rem;
+}
+form input {
+    display: block;
+    color: white;
+    width: 15vw;
+    background: transparent;
+    overflow: hidden;
+    border: 1px solid #8d8e8e;
+    border-width: 0 0 1px 0;
+}
+form textarea{
+    display: block;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+    border: 1px solid #8d8e8e;
+    border-width: 0 0 1px 0;
+    width: 33vw;
+    height: 20vh;
+}
+.enviar-btn button{
+    font-size: 1vw;
+    margin-left: 0.8rem;
+}
+
+/*---------------Sección CopyRight------------------*/
+.copy{
+    height: 0;
+    margin-left: 40vw;
+}
+.copy p{
+    font-family: 'VL NewParis Headline';
+    color: black;
+    width: 50vw;
+    font-size: 0.4rem;
+    font-weight: 600;
+}
+
+
+/*----------------Diseño adaptable------------------*/
+
+/*------Dispositivos SmartTV/MonitoresHD-------*/
+
+@media (max-width: 1400px) {
+    html {
+      font-size: 25px;
+    }
+}
+
+/*------Dispositivos Destock/NoteBooks------*/
+@media (max-width: 1200px) {
+    html {
+      font-size: 22.5px;
+    }
+}
+
+/*------Dispositivos MediaTablets/NetBooks-------*/
+
+@media (max-width: 1050px) {
+    html {
+      font-size: 20px;
+    }
+    .abajo {
+        height: 3.5em;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header label{
+        display: flex;
+        position: fixed;
+        right: 95px;
+        top: 24px;
+        transition: 1s ease;
+    }
+    .abajo label{ 
+        top:19px;
+        transition: 1.5s;
+      }
+
+    .logo img{
+        width: 7em;
+        height: auto;
+    }
+
+    .cont-menu {
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: rgba(20, 20, 20, 0.753);
+        top:4rem;
+        left: -100%;
+        border: 1px solid white;
+        transition: all 0.5s;
+    }
+    .cont-menu a{
+        color: white;
+        left: 3%;
+        border-bottom: 1px solid white;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    #boton-menu:checked ~ .cont-menu {
+       left: 0;
+    }
+}
+
+/*------Dispositivos Medium/Small-------*/
+
+@media (max-width: 800px) {
+    html {
+      font-size: 18px;
+    }
+    .cont-menu a{
+        left: 3%;
+  }
+  header label{
+    right: 88px;
+    top:21px;
+    transition: 1s ease;
+  }
+  .abajo label{ 
+    top:16px;
+    transition: 1.5s;
+  }
+}
+
+/*--------Dispositivos SmartPhones---------*/
+
+@media (max-width: 600px) {
+    html {
+      font-size: 15px;
+    }
+    header{
+        height: 10vh;
+    }
+    header label{
+        right: 75px;
+        top:18px;
+        transition: 1s ease;
+    }
+    .cont-menu a{
+        left: 4%;
+  }
+  .abajo label{
+    top:14px;
+    transition: 1.5s;
+  }
+    
+}
